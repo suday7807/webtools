@@ -49,8 +49,8 @@ export function CTA() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg text-white/80 max-w-2xl mx-auto mb-10"
             >
-              Join thousands of creators who use WebTools to streamline their work.
-              No signup required, completely free to use.
+              Explore the full collection of free, browser-based tools designed to help you get
+              work done faster. No signup required, completely free to use.
             </motion.p>
 
             <motion.div

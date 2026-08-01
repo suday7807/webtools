@@ -31,7 +31,7 @@ export function FeaturedTools() {
             Popular Tools
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Our most used and loved tools by thousands of users every day.
+            Our most in-demand tools, ready to use in seconds — free and without sign-up.
           </p>
         </motion.div>
 

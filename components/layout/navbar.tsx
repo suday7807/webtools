@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Search, Menu, X, Sun, Moon, Layers, ChevronDown, Keyboard } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { cn } from '@/lib/utils'
-import { toolsConfig, categories } from '@/lib/tools/config'
+import { toolsConfig, categories, getToolsByCategory } from '@/lib/tools/config'
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -331,15 +331,4 @@ export function Navbar() {
       </AnimatePresence>
     </header>
   )
-}
-
-function getToolsByCategory(categoryId: string) {
-  const categoryMap: Record<string, string[]> = {
-    pdf: ['image-to-pdf', 'pdf-merge', 'edit-pdf', 'pdf-to-markdown'],
-    markdown: ['docs-to-markdown', 'xml-to-markdown', 'notion-to-markdown', 'paste-to-markdown', 'json-to-markdown', 'csv-to-markdown', 'pdf-to-markdown-converter'],
-    faq: ['docs-to-faq', 'notion-to-faq', 'html-to-faq', 'docx-to-faq', 'webpage-to-faq', 'pdf-to-faq'],
-    ai: ['ai-saas-name-generator', 'ai-chatbot-name-generator'],
-    utility: ['email-signature-generator']
-  }
-  return toolsConfig.filter(tool => categoryMap[categoryId]?.includes(tool.id))
 }

@@ -22,13 +22,14 @@ const footerLinks = {
     { label: 'Contact', href: '/contact' },
     { label: 'Privacy Policy', href: '/privacy' },
     { label: 'Terms of Service', href: '/terms' },
+    { label: 'Sitemap', href: '/sitemap.xml' },
   ],
 }
 
 const socialLinks = [
   { icon: Twitter, href: 'https://x.com/suday7807', label: 'Twitter' },
   { icon: Linkedin, href: 'https://www.linkedin.com/in/uday-singh-baa578140', label: 'LinkedIn' },
-  { icon: Mail, href: 'mailto:sunday7807@gmail.com', label: 'Email' },
+  { icon: Mail, href: 'mailto:suday7807@gmail.com', label: 'Email' },
 ]
 
 export function Footer() {

@@ -28,6 +28,9 @@ export const metadata: Metadata = {
   authors: [{ name: 'WebTools' }],
   creator: 'WebTools',
   metadataBase: new URL(SITE_URL),
+  alternates: {
+    canonical: SITE_URL,
+  },
   icons: {
     icon: '/favicon.svg',
     apple: '/favicon.svg',
@@ -38,12 +41,21 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: SITE_NAME,
     title: 'WebTools - All-in-One Online Tools Platform',
-    description: 'Free online tools for PDF conversion, Markdown, FAQ generation, AI naming, and more.',
+    description: 'Free online tools for PDF conversion, Markdown, AI naming, and more.',
+    images: [
+      {
+        url: `${SITE_URL}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: 'WebTools - Free Online Tools',
+      },
+    ],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'WebTools - All-in-One Online Tools Platform',
-    description: 'Free online tools for PDF conversion, Markdown, FAQ generation, AI naming, and more.',
+    description: 'Free online tools for PDF conversion, Markdown, AI naming, and more.',
+    images: [`${SITE_URL}/og-image.png`],
   },
   robots: {
     index: true,
@@ -81,6 +93,35 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} ${plusJakarta.variable} font-sans antialiased min-h-screen flex flex-col`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: SITE_NAME,
+              url: SITE_URL,
+              logo: `${SITE_URL}/favicon.svg`,
+              contactPoint: {
+                '@type': 'ContactPoint',
+                email: 'suday7807@gmail.com',
+                contactType: 'customer support',
+              },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: SITE_NAME,
+              url: SITE_URL,
+              description: 'Free online tools for PDF conversion, Markdown, AI naming, and more.',
+            }),
+          }}
+        />
         <Providers>
           <Navbar />
           <main className="flex-1">

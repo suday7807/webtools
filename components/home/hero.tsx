@@ -5,10 +5,10 @@ import Link from 'next/link'
 import { ArrowRight, Sparkles, Zap, Shield, Users } from 'lucide-react'
 
 const stats = [
-  { value: '20+', label: 'Tools' },
-  { value: '100K+', label: 'Users' },
-  { value: '1M+', label: 'Conversions' },
-  { value: '99.9%', label: 'Uptime' },
+  { value: '9+', label: 'Free Tools' },
+  { value: '100%', label: 'Free to Use' },
+  { value: '0', label: 'Sign-ups Required' },
+  { value: '100%', label: 'Browser-Based' },
 ]
 
 const features = [
@@ -66,8 +66,8 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
           >
-            Convert, generate, and transform with our suite of intelligent tools.
-            PDF converters, AI name generators, FAQ builders, and more — all free.
+            Convert, generate, and transform with our suite of practical tools.
+            PDF converters, AI name generators, Markdown converters, and more — all free.
           </motion.p>
 
           {/* CTA Buttons */}

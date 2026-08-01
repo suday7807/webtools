@@ -1,8 +1,12 @@
 import { Metadata } from 'next'
+import { SITE_URL } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description: 'Read the terms and conditions for using WebTools services.',
+  alternates: {
+    canonical: `${SITE_URL}/terms`,
+  },
 }
 
 export default function TermsPage() {
@@ -11,7 +15,7 @@ export default function TermsPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="prose prose-lg dark:prose-invert max-w-none">
           <h1 className="text-4xl font-bold mb-8">Terms of Service</h1>
-          <p className="text-muted-foreground mb-8">Last updated: May 2025</p>
+          <p className="text-muted-foreground mb-8">Last updated: August 1, 2026</p>
 
           <div className="space-y-8">
             <section className="bg-card border border-border rounded-2xl p-8">
@@ -94,19 +98,50 @@ export default function TermsPage() {
             </section>
 
             <section className="bg-card border border-border rounded-2xl p-8">
-              <h2 className="text-2xl font-bold mb-4">9. Governing Law</h2>
+              <h2 className="text-2xl font-bold mb-4">10. External Links</h2>
               <p className="text-muted-foreground">
-                These terms and conditions are governed by and construed in accordance with
-                applicable laws. Any disputes arising from these terms shall be resolved in
-                accordance with such laws.
+                The Service may contain links to third-party websites. We do not control and are
+                not responsible for the content, policies, or practices of any third-party sites.
+                Your use of third-party sites is at your own risk and subject to their own terms
+                and policies.
               </p>
             </section>
 
             <section className="bg-card border border-border rounded-2xl p-8">
-              <h2 className="text-2xl font-bold mb-4">10. Contact Information</h2>
+              <h2 className="text-2xl font-bold mb-4">11. Termination</h2>
+              <p className="text-muted-foreground">
+                We may terminate or suspend your access to the Service at any time, without
+                notice, for any reason, including if you breach these Terms. Upon termination,
+                your right to use the Service ceases immediately. Sections that by their nature
+                should survive termination shall survive, including but not limited to the
+                Disclaimer, Limitation of Liability, and Governing Law.
+              </p>
+            </section>
+
+            <section className="bg-card border border-border rounded-2xl p-8">
+              <h2 className="text-2xl font-bold mb-4">12. Severability</h2>
+              <p className="text-muted-foreground">
+                If any provision of these Terms is held to be invalid or unenforceable, that
+                provision shall be modified to the minimum extent necessary to make it valid
+                and enforceable, and the remaining provisions shall continue in full force and
+                effect.
+              </p>
+            </section>
+
+            <section className="bg-card border border-border rounded-2xl p-8">
+              <h2 className="text-2xl font-bold mb-4">13. Governing Law</h2>
+              <p className="text-muted-foreground">
+                These Terms are governed by and construed in accordance with the laws applicable
+                where the owner of WebTools is located. Any disputes arising from these Terms
+                shall be resolved in accordance with such laws.
+              </p>
+            </section>
+
+            <section className="bg-card border border-border rounded-2xl p-8">
+              <h2 className="text-2xl font-bold mb-4">14. Contact Information</h2>
               <p className="text-muted-foreground">
                 If you have any questions about these Terms of Service, please contact us at
-                hello@webtools.com.
+                suday7807@gmail.com.
               </p>
             </section>
           </div>
