@@ -35,7 +35,7 @@ const sections = [
     body: `We use cookies and similar technologies to keep the Service reliable and to understand how it is used. A cookie is a small file stored on your device.
 
 - Essential cookies: required for basic features such as theme preferences.
-- Analytics cookies: help us understand aggregate usage. We may use third-party analytics services to analyze traffic.
+- Analytics cookies: we use Google Analytics to understand how visitors use the site — which pages are visited, how long users stay, and how the site is reached. Google Analytics uses cookies to collect this information in aggregate. To opt out of Google Analytics across all websites, you can install the Google Analytics opt-out browser add-on (https://tools.google.com/dlpage/gaoptout).
 - Advertising cookies: where we display advertising, third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to this website and other sites on the Internet.
 
 You can control cookies through your browser settings, and you can opt out of personalized advertising from Google by visiting Google's Ads Settings (https://www.google.com/settings/ads). You can also visit https://www.aboutads.info to learn more about opting out of interest-based advertising.`,
@@ -50,7 +50,8 @@ Google's use of the advertising cookie enables it and its partners to serve ads 
     title: '6. Third-Party Services',
     body: `We may use third-party services for functionality, communication, and analytics, including:
 - Contact form processing services to deliver messages you send us.
-- Analytics and advertising services as described in this policy.
+- Google Analytics, a web analytics service provided by Google, to measure and understand site usage.
+- Advertising services as described in this policy.
 
 Each third-party service has its own privacy policy governing its collection and use of information. We encourage you to review them. We are not responsible for the privacy practices of third-party websites.`,
   },

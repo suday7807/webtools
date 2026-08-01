@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
 import { Inter, Plus_Jakarta_Sans } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import { Providers } from '@/components/providers'
 import { Navbar } from '@/components/layout/navbar'
 import { Footer } from '@/components/layout/footer'
 import { SITE_URL, SITE_NAME } from '@/lib/site'
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
 const inter = Inter({
   subsets: ['latin'],
@@ -91,6 +94,14 @@ export default function RootLayout({
             `,
           }}
         />
+        {GA_ID && (
+          <>
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+            <Script id="ga4-init" strategy="afterInteractive" dangerouslySetInnerHTML={{
+              __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}',{anonymize_ip:true});`,
+            }} />
+          </>
+        )}
       </head>
       <body className={`${inter.variable} ${plusJakarta.variable} font-sans antialiased min-h-screen flex flex-col`}>
         <script
