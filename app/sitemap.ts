@@ -1,8 +1,9 @@
 import { MetadataRoute } from 'next'
 import { toolsConfig } from '@/lib/tools/config'
+import { SITE_URL } from '@/lib/site'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://webtools.com'
+  const baseUrl = SITE_URL
 
   const staticPages = [
     '',

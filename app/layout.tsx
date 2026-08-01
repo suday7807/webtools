@@ -4,6 +4,7 @@ import './globals.css'
 import { Providers } from '@/components/providers'
 import { Navbar } from '@/components/layout/navbar'
 import { Footer } from '@/components/layout/footer'
+import { SITE_URL, SITE_NAME } from '@/lib/site'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   keywords: ['online tools', 'pdf tools', 'markdown converter', 'faq generator', 'ai tools', 'free tools'],
   authors: [{ name: 'WebTools' }],
   creator: 'WebTools',
-  metadataBase: new URL('https://webtools.com'),
+  metadataBase: new URL(SITE_URL),
   icons: {
     icon: '/favicon.svg',
     apple: '/favicon.svg',
@@ -34,8 +35,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://webtools.com',
-    siteName: 'WebTools',
+    url: SITE_URL,
+    siteName: SITE_NAME,
     title: 'WebTools - All-in-One Online Tools Platform',
     description: 'Free online tools for PDF conversion, Markdown, FAQ generation, AI naming, and more.',
   },
